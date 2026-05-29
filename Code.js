@@ -12,7 +12,7 @@ const FIELDS = {
   position: "position",
   school: "school",
   department: "department",
-  credentialEmail: "credentialEmail",
+  credentialRecipient: "credentialRecipient",
 };
 
 const HEADER_MATCHERS = {
@@ -26,7 +26,7 @@ const HEADER_MATCHERS = {
   [FIELDS.position]: [/position|title/i],
   [FIELDS.school]: [/school|organization/i],
   [FIELDS.department]: [/department|dept/i],
-  [FIELDS.credentialEmail]: [
+  [FIELDS.credentialRecipient]: [
     /^(personal|home|recovery).*email/i,
     /^email(\s*address)?$/i,
   ],
@@ -157,7 +157,7 @@ function buildGoogleOnboardingLink_(namedValues) {
     title: namedValues[FIELDS.position],
     department: namedValues[FIELDS.department],
     ou: namedValues[FIELDS.ou],
-    credentialEmail: namedValues[FIELDS.credentialEmail],
+    credentialRecipient: namedValues[FIELDS.credentialRecipient],
   };
 
   const queryString = Object.keys(queryParams)
