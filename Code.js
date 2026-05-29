@@ -34,7 +34,7 @@ const TAB_DEFAULT_RULES = [
   },
   {
     matcher: /coach|athlet/i,
-    ou: "/Staff/Athletics/",
+    ou: "/Staff/Athletics",
   },
 ];
 
